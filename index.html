@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAKAMURA SOU — FILMMAKER</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="vf" id="cursor">
+  <div class="vf-ring"></div>
+  <div class="vf-h"></div>
+  <div class="vf-v"></div>
+  <div class="vf-c vf-c--tl"></div>
+  <div class="vf-c vf-c--tr"></div>
+  <div class="vf-c vf-c--bl"></div>
+  <div class="vf-c vf-c--br"></div>
+  <div class="vf-rec">&#9679; REC</div>
+</div>
+
+<!-- FILM LEADER OPENING -->
+<div class="opening" id="opening">
+  <div class="op-circle op-c1"></div>
+  <div class="op-circle op-c2"></div>
+  <div class="op-cross op-ch"></div>
+  <div class="op-cross op-cv"></div>
+  <div class="op-num" id="opNum">3</div>
+  <div class="op-label">NAKAMURA SOU FILMS</div>
+  <div class="op-timecode" id="opTc">00:00:00:00</div>
+  <button class="op-skip" id="opSkip">SKIP &rsaquo;</button>
+</div>
+
+<!-- GRAIN OVERLAY -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">NSF</div>
+  <ul class="nav-links">
+    <li><a href="#works" class="nav-link" data-scramble>WORKS</a></li>
+    <li><a href="#about" class="nav-link" data-scramble>ABOUT</a></li>
+    <li><a href="#services" class="nav-link" data-scramble>SERVICES</a></li>
+    <li><a href="#contact" class="nav-link mag-btn">CONTACT</a></li>
+  </ul>
+  <button class="nav-ham" id="navHam" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <ul>
+    <li><a href="#works" class="mm-link">WORKS</a></li>
+    <li><a href="#about" class="mm-link">ABOUT</a></li>
+    <li><a href="#services" class="mm-link">SERVICES</a></li>
+    <li><a href="#contact" class="mm-link">CONTACT</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-grid" id="heroGrid">
+    <div class="hero-eyebrow"><span class="courier">FILMMAKER / DIRECTOR</span></div>
+    <h1 class="hero-title glitch" data-text="中村颯">
+      <span class="ht-ja">中村颯</span>
+    </h1>
+    <p class="hero-sub">映像で世界を揺らす</p>
+    <div class="hero-cta">
+      <a href="#works" class="btn-primary mag-btn" data-scramble>WATCH REEL</a>
+      <a href="#contact" class="btn-ghost mag-btn" data-scramble>LET'S SHOOT</a>
+    </div>
+    <div class="hero-meta">
+      <span class="courier">TOKYO / JAPAN</span>
+      <span class="sep">—</span>
+      <span class="courier">EST. 2018</span>
+    </div>
+  </div>
+  <div class="hero-frame">
+    <div class="hf-inner">
+      <div class="hf-tc" id="heroTc">00:00:00:00</div>
+      <div class="hf-label">SHOWREEL 2024</div>
+      <div class="hf-bars">
+        <div class="hf-bar"></div>
+        <div class="hf-bar"></div>
+        <div class="hf-bar"></div>
+        <div class="hf-bar"></div>
+      </div>
+      <div class="hf-play">&#9654;</div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint courier">SCROLL &#8595;</div>
+</section>
+
+<!-- FILM STRIP -->
+<div class="filmstrip" aria-hidden="true">
+  <div class="fs-track">
+    <div class="fs-perf"></div>
+    <div class="fs-frames">
+      <span>NAKAMURA</span>
+      <span>&#9632;</span>
+      <span>FILMMAKER</span>
+      <span>&#9632;</span>
+      <span>TOKYO</span>
+      <span>&#9632;</span>
+      <span>2024</span>
+      <span>&#9632;</span>
+      <span>NAKAMURA</span>
+      <span>&#9632;</span>
+      <span>FILMMAKER</span>
+      <span>&#9632;</span>
+      <span>TOKYO</span>
+      <span>&#9632;</span>
+      <span>2024</span>
+      <span>&#9632;</span>
+    </div>
+    <div class="fs-perf"></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-left reveal">
+      <div class="al-label courier">// DIRECTOR'S CUT</div>
+      <h2 class="al-heading">映像は<br><em>言葉を超える</em><br>武器だ</h2>
+      <p class="al-body">2018年よりフリーランス映像クリエイターとして活動。CM・MV・ドキュメンタリーを中心に、企業の核心を映像へと昇華させる。「撮る」のではなく「創る」——それが中村颯のスタイル。</p>
+      <div class="al-tags">
+        <span class="tag">#COMMERCIAL</span>
+        <span class="tag">#MUSICVIDEO</span>
+        <span class="tag">#DOCUMENTARY</span>
+        <span class="tag">#CORPORATE</span>
+      </div>
+    </div>
+    <div class="about-right reveal">
+      <div class="ar-portrait">
+        <div class="ar-frame">
+          <div class="ar-inner">
+            <div class="ar-name">中村 颯</div>
+            <div class="ar-en courier">NAKAMURA SOU</div>
+            <div class="ar-role">Filmmaker · Director</div>
+          </div>
+          <div class="ar-tc courier" id="arTc">24fps · 4K · RAW</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="works" id="works">
+  <div class="works-header reveal">
+    <div class="courier wh-num">01</div>
+    <h2 class="wh-title">SELECTED<br>WORKS</h2>
+    <div class="courier wh-year">2020 — 2024</div>
+  </div>
+  <div class="works-grid">
+    <article class="wk-card wk-wide reveal-wk" style="--accent:#CC0022">
+      <div class="wk-thumb" style="background:linear-gradient(135deg,#CC0022 0%,#1a0005 100%)"></div>
+      <div class="wk-info">
+        <div class="wk-cat courier">COMMERCIAL</div>
+        <h3 class="wk-title">RISE — 自動車メーカー TVC</h3>
+        <div class="wk-meta courier">2024 · 4K · 30s</div>
+      </div>
+      <div class="wk-hover">
+        <span class="courier">VIEW PROJECT &#8599;</span>
+      </div>
+    </article>
+    <article class="wk-card reveal-wk" style="--accent:#FF6600">
+      <div class="wk-thumb" style="background:linear-gradient(135deg,#FF6600 0%,#1a0a00 100%)"></div>
+      <div class="wk-info">
+        <div class="wk-cat courier">MUSIC VIDEO</div>
+        <h3 class="wk-title">GHOST SEASON</h3>
+        <div class="wk-meta courier">2024 · 4K · 4min</div>
+      </div>
+      <div class="wk-hover">
+        <span class="courier">VIEW PROJECT &#8599;</span>
+      </div>
+    </article>
+    <article class="wk-card reveal-wk" style="--accent:#00DDFF">
+      <div class="wk-thumb" style="background:linear-gradient(135deg,#00DDFF 0%,#000a1a 100%)"></div>
+      <div class="wk-info">
+        <div class="wk-cat courier">DOCUMENTARY</div>
+        <h3 class="wk-title">匠 — 職人の手仕事</h3>
+        <div class="wk-meta courier">2023 · 4K · 45min</div>
+      </div>
+      <div class="wk-hover">
+        <span class="courier">VIEW PROJECT &#8599;</span>
+      </div>
+    </article>
+    <article class="wk-card reveal-wk" style="--accent:#FFD700">
+      <div class="wk-thumb" style="background:linear-gradient(135deg,#FFD700 0%,#1a1000 100%)"></div>
+      <div class="wk-info">
+        <div class="wk-cat courier">CORPORATE</div>
+        <h3 class="wk-title">HORIZON — 大手商社リブランド</h3>
+        <div class="wk-meta courier">2023 · 4K · 3min</div>
+      </div>
+      <div class="wk-hover">
+        <span class="courier">VIEW PROJECT &#8599;</span>
+      </div>
+    </article>
+    <article class="wk-card wk-wide reveal-wk" style="--accent:#CC0022">
+      <div class="wk-thumb" style="background:linear-gradient(135deg,#550011 0%,#CC0022 50%,#050505 100%)"></div>
+      <div class="wk-info">
+        <div class="wk-cat courier">SHORT FILM</div>
+        <h3 class="wk-title">RED LINE — 映画祭受賞作品</h3>
+        <div class="wk-meta courier">2022 · 4K · 18min</div>
+      </div>
+      <div class="wk-hover">
+        <span class="courier">VIEW PROJECT &#8599;</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="sb-item">
+    <div class="sb-num" data-target="200">0</div>
+    <div class="sb-label courier">PROJECTS DELIVERED</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-item">
+    <div class="sb-num" data-target="6">0</div>
+    <div class="sb-label courier">YEARS EXPERIENCE</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-item">
+    <div class="sb-num" data-target="12">0</div>
+    <div class="sb-label courier">AWARDS WON</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-item">
+    <div class="sb-num" data-target="50">0</div>
+    <div class="sb-label courier">HAPPY CLIENTS</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="sv-header reveal">
+    <h2 class="svh-title">WHAT I<br>CREATE</h2>
+    <p class="svh-sub">映像制作のすべてを、ワンストップで。</p>
+  </div>
+  <div class="sv-list">
+    <div class="sv-row reveal-s" data-num="01">
+      <div class="svr-title">COMMERCIAL FILM</div>
+      <div class="svr-desc">TVCMから Web広告まで。ブランドの核心を捉えた映像で購買意欲を刺激する。</div>
+      <div class="svr-price courier">¥300,000 ~</div>
+    </div>
+    <div class="sv-row reveal-s" data-num="02">
+      <div class="svr-title">MUSIC VIDEO</div>
+      <div class="svr-desc">アーティストのビジョンを映像化。コンセプチュアルからハイアクションまで対応。</div>
+      <div class="svr-price courier">¥200,000 ~</div>
+    </div>
+    <div class="sv-row reveal-s" data-num="03">
+      <div class="svr-title">DOCUMENTARY</div>
+      <div class="svr-desc">企業・人物・プロジェクト。本質を掘り下げ、視聴者の心を動かすドキュメント映像。</div>
+      <div class="svr-price courier">¥400,000 ~</div>
+    </div>
+    <div class="sv-row reveal-s" data-num="04">
+      <div class="svr-title">CORPORATE VIDEO</div>
+      <div class="svr-desc">採用・IR・製品紹介。企業価値を最大化するブランデッドコンテンツ制作。</div>
+      <div class="svr-price courier">¥250,000 ~</div>
+    </div>
+    <div class="sv-row reveal-s" data-num="05">
+      <div class="svr-title">SHORT FILM</div>
+      <div class="svr-desc">映画祭出品から自主制作まで。クリエイティブな表現を全力でサポート。</div>
+      <div class="svr-price courier">応相談</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-bg-text" aria-hidden="true">SHOOT</div>
+  <div class="contact-inner reveal">
+    <div class="ct-eyebrow courier">// GET IN TOUCH</div>
+    <h2 class="ct-title">LET'S<br>CREATE<br>SOMETHING<br>UNFORGETTABLE</h2>
+    <p class="ct-sub">プロジェクトの規模を問わず、まずはお気軽にご相談ください。</p>
+    <div class="ct-actions">
+      <a href="mailto:contact@nakamura-sou.film" class="btn-primary mag-btn" data-scramble>SEND MESSAGE</a>
+      <a href="tel:090-0000-0000" class="ct-tel courier">090-XXXX-XXXX</a>
+    </div>
+    <div class="ct-social">
+      <a href="#" class="cs-link courier">INSTAGRAM</a>
+      <a href="#" class="cs-link courier">YOUTUBE</a>
+      <a href="#" class="cs-link courier">VIMEO</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="ft-left courier">© 2024 NAKAMURA SOU FILMS. ALL RIGHTS RESERVED.</div>
+  <div class="ft-right courier">TOKYO, JAPAN</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
