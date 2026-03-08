@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSIC VIDEO — HASAKA YUKI FILMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=DM+Sans:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root{--bg:#050505;--red:#CC0022;--cream:#F2EDE4;--gray:#1A1A1A;--gray2:#2A2A2A;--muted:#666;--ff-display:'Bebas Neue',sans-serif;--ff-mono:'Courier Prime',monospace;--ff-body:'DM Sans',sans-serif;--ff-jp:'Noto Serif JP',serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--cream);font-family:var(--ff-body);cursor:none;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:9999;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:g .15s steps(1) infinite}
+    @keyframes g{0%{transform:translate(0,0)}50%{transform:translate(4%,6%)}100%{transform:translate(-3%,4%)}}
+    .vf{position:fixed;top:0;left:0;width:48px;height:48px;pointer-events:none;z-index:10000;transform:translate(-50%,-50%)}
+    .vf-ring{position:absolute;inset:0;border:1px solid rgba(242,237,228,.6);border-radius:50%;animation:vfP 2.4s ease-in-out infinite}
+    @keyframes vfP{0%,100%{opacity:.6}50%{opacity:1}}
+    .vf-h{position:absolute;top:50%;left:0;width:100%;height:1px;background:rgba(242,237,228,.5);transform:translateY(-50%)}
+    .vf-v{position:absolute;top:0;left:50%;width:1px;height:100%;background:rgba(242,237,228,.5);transform:translateX(-50%)}
+    .vf-c{position:absolute;width:8px;height:8px;border-color:var(--red);border-style:solid}
+    .vf-c--tl{top:0;left:0;border-width:2px 0 0 2px}.vf-c--tr{top:0;right:0;border-width:2px 2px 0 0}
+    .vf-c--bl{bottom:0;left:0;border-width:0 0 2px 2px}.vf-c--br{bottom:0;right:0;border-width:0 2px 2px 0}
+    nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:28px 60px;z-index:1000;background:rgba(5,5,5,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(204,0,34,.2)}
+    .nav-logo{font-family:var(--ff-display);font-size:28px;letter-spacing:.1em;color:var(--red)}
+    .nav-back{font-family:var(--ff-mono);font-size:11px;letter-spacing:.25em;color:var(--muted);transition:color .2s}
+    .nav-back:hover{color:var(--cream)}
+    .sv-hero{min-height:100vh;padding:160px 80px;display:flex;align-items:flex-end;position:relative;overflow:hidden;border-bottom:1px solid var(--gray2)}
+    .sv-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(204,0,34,.2) 0%,transparent 50%),linear-gradient(to top,rgba(5,5,5,.9) 0%,transparent 60%)}
+    .sv-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(204,0,34,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(204,0,34,.05) 1px,transparent 1px);background-size:80px 80px}
+    .sv-hero-inner{position:relative;z-index:2;max-width:700px}
+    .sv-hero-label{font-family:var(--ff-mono);font-size:10px;letter-spacing:.3em;color:var(--red);margin-bottom:24px}
+    .sv-hero-title{font-family:var(--ff-display);font-size:clamp(80px,14vw,160px);line-height:.88;letter-spacing:.02em;margin-bottom:32px}
+    .sv-hero-sub{font-family:var(--ff-jp);font-size:15px;line-height:1.9;color:rgba(242,237,228,.7);font-weight:300;margin-bottom:40px}
+    .sv-hero-price{font-family:var(--ff-mono);font-size:28px;letter-spacing:.05em;color:var(--red)}
+    .what{padding:120px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;border-bottom:1px solid var(--gray2);align-items:center}
+    .what-label{font-family:var(--ff-mono);font-size:10px;letter-spacing:.3em;color:var(--red);margin-bottom:24px}
+    .what-title{font-family:var(--ff-display);font-size:clamp(48px,7vw,80px);line-height:.9;margin-bottom:0}
+    .what-right p{font-family:var(--ff-jp);font-size:15px;line-height:2;color:rgba(242,237,228,.7);font-weight:300;margin-bottom:24px}
+    .genres{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+    .genre-tag{font-family:var(--ff-mono);font-size:10px;letter-spacing:.15em;padding:6px 14px;border:1px solid var(--gray2);color:var(--muted)}
+    .works{padding:120px 80px;border-bottom:1px solid var(--gray2)}
+    .works-label{font-family:var(--ff-mono);font-size:10px;letter-spacing:.3em;color:var(--red);margin-bottom:48px}
+    .works-title{font-family:var(--ff-display);font-size:clamp(48px,7vw,80px);line-height:.9;margin-bottom:80px}
+    .works-list{display:flex;flex-direction:column;gap:2px}
+    .work-row{display:grid;grid-template-columns:60px 1fr auto;gap:32px;padding:32px 40px;background:var(--gray);align-items:center;transition:background .3s}
+    .work-row:hover{background:#222}
+    .work-idx{font-family:var(--ff-mono);font-size:10px;letter-spacing:.2em;color:var(--red)}
+    .work-info-title{font-family:var(--ff-jp);font-size:16px;font-weight:700;margin-bottom:4px}
+    .work-info-meta{font-family:var(--ff-mono);font-size:10px;color:var(--muted);letter-spacing:.1em}
+    .work-genre{font-family:var(--ff-mono);font-size:10px;letter-spacing:.15em;color:var(--muted)}
+    .sv-cta{padding:120px 80px;text-align:center}
+    .sv-cta-title{font-family:var(--ff-display);font-size:clamp(48px,7vw,80px);line-height:.95;margin-bottom:48px}
+    .btn{display:inline-block;background:var(--red);color:var(--cream);padding:18px 48px;font-family:var(--ff-mono);font-size:12px;letter-spacing:.25em;transition:opacity .2s}
+    .btn:hover{opacity:.85}
+    .btn-ghost{background:transparent;border:1px solid var(--cream);margin-left:16px}
+    .btn-ghost:hover{background:var(--cream);color:var(--bg);opacity:1}
+    footer{border-top:1px solid var(--gray2);padding:40px 80px;display:flex;justify-content:space-between}
+    .ft-l,.ft-r{font-family:var(--ff-mono);font-size:10px;letter-spacing:.2em;color:var(--muted)}
+    @media(max-width:768px){
+      nav{padding:20px 24px}
+      .sv-hero{padding:120px 24px 80px}
+      .what{grid-template-columns:1fr;padding:80px 24px}
+      .works,.sv-cta{padding:80px 24px}
+      .work-row{grid-template-columns:40px 1fr;gap:16px}
+      .work-genre{display:none}
+      footer{padding:24px;flex-direction:column;gap:8px;text-align:center}
+    }
+  </style>
+</head>
+<body>
+<div class="vf" id="cursor"><div class="vf-ring"></div><div class="vf-h"></div><div class="vf-v"></div><div class="vf-c vf-c--tl"></div><div class="vf-c vf-c--tr"></div><div class="vf-c vf-c--bl"></div><div class="vf-c vf-c--br"></div></div>
+<div class="grain" aria-hidden="true"></div>
+<nav>
+  <div class="nav-logo">HYF</div>
+  <a href="index.html" class="nav-back">&larr; ALL SERVICES</a>
+</nav>
+
+<div class="sv-hero">
+  <div class="sv-hero-grid" aria-hidden="true"></div>
+  <div class="sv-hero-inner">
+    <div class="sv-hero-label">SERVICE 02 &mdash; MUSIC VIDEO</div>
+    <h1 class="sv-hero-title">MUSIC<br>VIDEO</h1>
+    <p class="sv-hero-sub">アーティストの内側にあるビジョンを映像にする。コンセプチュアルからハイアクションまで対応。</p>
+    <div class="sv-hero-price">&yen;200,000 ~</div>
+  </div>
+</div>
+
+<div class="what">
+  <div class="what-left">
+    <div class="what-label">// WHAT WE OFFER</div>
+    <h2 class="what-title">VISUAL<br>STORYTELLING</h2>
+    <div class="genres">
+      <span class="genre-tag">NARRATIVE</span>
+      <span class="genre-tag">PERFORMANCE</span>
+      <span class="genre-tag">CONCEPTUAL</span>
+      <span class="genre-tag">LYRIC VIDEO</span>
+      <span class="genre-tag">LIVE SESSION</span>
+    </div>
+  </div>
+  <div class="what-right">
+    <p>アーティストの音楽とアイデンティティを深く理解し、映像言語で表現する。ストーリー主導からビジュアル主導まで、なんでも対応。</p>
+    <p>コンセプト開発から編集・カラーグレーディングまで、クリエイターと二人三脚で作り上げる。</p>
+  </div>
+</div>
+
+<div class="works">
+  <div class="works-label">// SELECTED MV WORKS</div>
+  <h2 class="works-title">MV<br>PORTFOLIO</h2>
+  <div class="works-list">
+    <div class="work-row"><div class="work-idx">01</div><div><div class="work-info-title">GHOST SEASON</div><div class="work-info-meta">2024 &middot; 4K &middot; 4min</div></div><div class="work-genre">NARRATIVE</div></div>
+    <div class="work-row"><div class="work-idx">02</div><div><div class="work-info-title">SILENT BLOOM</div><div class="work-info-meta">2023 &middot; 4K &middot; 3min 30s</div></div><div class="work-genre">CONCEPTUAL</div></div>
+    <div class="work-row"><div class="work-idx">03</div><div><div class="work-info-title">NEON PARADE</div><div class="work-info-meta">2023 &middot; 4K &middot; 4min 15s</div></div><div class="work-genre">PERFORMANCE</div></div>
+    <div class="work-row"><div class="work-idx">04</div><div><div class="work-info-title">LAST SUMMER</div><div class="work-info-meta">2022 &middot; 4K &middot; 3min 45s</div></div><div class="work-genre">NARRATIVE</div></div>
+  </div>
+</div>
+
+<div class="sv-cta">
+  <h2 class="sv-cta-title">YOUR VISION,<br>OUR LENS</h2>
+  <a href="contact.html" class="btn">START PROJECT &rarr;</a>
+  <a href="index.html#services" class="btn btn-ghost">ALL SERVICES</a>
+</div>
+
+<footer>
+  <div class="ft-l">&copy; 2024 HASAKA YUKI FILMS.</div>
+  <div class="ft-r">TOKYO, JAPAN</div>
+</footer>
+<script>
+  const c=document.getElementById('cursor');let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  function t(){cx+=(mx-cx)*.12;cy+=(my-cy)*.12;c.style.left=cx+'px';c.style.top=cy+'px';requestAnimationFrame(t);}t();
+</script>
+</body>
+</html>
